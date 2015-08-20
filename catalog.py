@@ -10,19 +10,29 @@ def showCategories():
 
 # Create route for adding a new category
 @app.route('/categories/new/')
+def newCategory():
+	return 'This page will have a form to create a new category'
 
 # Create route for editing a category
 @app.route('/categories/<int:category_id>/edit/')
+def editCategory(category_id):
+	return 'This page will have a form to edit category %s' % category_id
 
 # Create route for deleting a category
 @app.route('/categories/<int:category_id>/delete/')
+def deleteCategory(category_id):
+	return 'This page will have a form to delete category %s' % category_id
 
 # Create route to show a category's items
 @app.route('/categories/<int:category_id>/')
 @app.route('/categories/<int:category_id>/items/')
+def showItem(category_id):
+	return 'This page will return all items in category %s' % category_id
 
 # Create route for adding a new item to a category
 @app.route('/categories/<int:category_id>/new/')
+def newItem(category_id):
+	return 'This page will have a form to add a new item in category %s' % category_id
 
 # Create route for editing an item in a category
 @app.route('/categories/<int:category_id>/items/<int:item_id>/edit')
