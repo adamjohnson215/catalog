@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<link rel=stylesheet type=text/css href = '{{ url_for('static', filename = 'styles.css')}}'>
+	</head>
+	
+	<body>
+		<div class = 'header'>
+			<h1>Create a New Category</h1>
+				<div class = 'form'>
+					<form action = '{{ url_for('newCategory')}}' method = 'POST'>
+					
+						<dl>
+							<dt>Name:</dt>
+							<dd><input type = 'text' size = '30' name = 'name' placeholder = 'New Category'></dd>
+							<dt>Description:</dt>
+							<dd><input type = 'text' size = '250' name = 'description' placeholder = 'Please provide a short description of the category'></dd>
+						</dl>
+						<input type = 'submit' value = 'Create'>
+					</form>
+			</div>
+		</div>
+	</body>
+</html>
